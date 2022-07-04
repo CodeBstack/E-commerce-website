@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.a3c89704.css">
+    <title>E-commerce</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="checkout">
+                <div class="arrow"><p>&#8592</p></div>
+                <div class="check">
+                    <h1>Checkout</h1>
+                    <p>Homepage/Clothing/Category<span>/Checkout</span></p>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <img src="/cart-icon.05f277ab.svg" alt="cart">
+                <div class="counts"><p>1</p></div>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <div class="item-list">
+                <div class="nav">
+                    <div class="nav-item">
+                        <div class="nav-1">
+                            <div class="mains">
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <img src="/test-imag.04b38d70.svg" alt="item">
+                        <h3 class="item-title">Govanni Polo</h3>
+                        <p class="price">$140.00</p>
+                    </div><div class="item">
+                        <img src="/test-imag.04b38d70.svg" alt="item">
+                        <h3 class="item-title">Govanni Polo</h3>
+                        <p class="price">$140.00</p>
+                    </div><div class="item">
+                        <img src="/test-imag.04b38d70.svg" alt="item">
+                        <h3 class="item-title">Govanni Polo</h3>
+                        <p class="price">$140.00</p>
+                    </div><div class="item">
+                        <img src="/test-imag.04b38d70.svg" alt="item">
+                        <h3 class="item-title">Govanni Polo</h3>
+                        <p class="price">$140.00</p>
+                    </div><div class="item">
+                        <img src="/test-imag.04b38d70.svg" alt="item">
+                        <h3 class="item-title">Govanni Polo</h3>
+                        <p class="price">$140.00</p>
+                    </div><div class="item">
+                        <img src="/test-imag.04b38d70.svg" alt="item">
+                        <h3 class="item-title">Govanni Polo</h3>
+                        <p class="price">$140.00</p>
+                    </div><div class="item">
+                        <img src="/test-imag.04b38d70.svg" alt="item">
+                        <h3 class="item-title">Govanni Polo</h3>
+                        <p class="price">$140.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="orders">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa enim rerum quod placeat cum natus voluptas necessitatibus commodi aperiam doloribus, a ab saepe nostrum nihil, ea voluptates molestiae? Voluptates, omnis.</div>
+        </main>
+    </div>  
+</body>
+</html>

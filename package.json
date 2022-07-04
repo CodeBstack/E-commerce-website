@@ -1,0 +1,23 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeBstack/E-commerce-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeBstack/E-commerce-website/issues"
+  },
+  "homepage": "https://github.com/CodeBstack/E-commerce-website#readme",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.1"
+  }
+}

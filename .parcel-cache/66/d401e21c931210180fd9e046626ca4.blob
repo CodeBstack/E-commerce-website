@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="64890df949e24b5c782b8cc8544e9ec5">
+<link rel="preconnect" href="da9afb61e15e5caa1c8af2c6f046c478" crossorigin="">
+<link href="0d89c5516859fb7d361340e3e020599a" rel="stylesheet">
+
+    <link rel="stylesheet" href="12adf0669173bd54a321da4d94777e24">
+    <title>E-commerce</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="checkout">
+                <div class="arrow"><p>&#8592</p></div>
+                <div class="check">
+                    <h1>Checkout</h1>
+                    <p>Homepage/Clothing/Category<span>/Checkout</span></p>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <img src="f6804473eb5047f421c836c1e7856830" alt="cart">
+                <div class="counts"><p>1</p></div>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <div class="item-list">
+                <div class="nav"></div>
+                <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div> <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div> <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div> <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div> <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div> <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div> <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div> <div class="items">
+                    <div class="item">
+                        <img src="24cab8a22dcb416a868915dbc148445c" alt="item">
+                        <h2 class="item-title">Govanni Polo</h2>
+                        <h3 class="price">$140.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="orders">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa enim rerum quod placeat cum natus voluptas necessitatibus commodi aperiam doloribus, a ab saepe nostrum nihil, ea voluptates molestiae? Voluptates, omnis.</div>
+        </main>
+    </div>  
+</body>
+</html>

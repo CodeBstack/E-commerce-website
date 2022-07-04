@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+</head>
+<body>
+   
+            <div class="container">
+                <header>
+                    <div class="checkout">
+                        <div class="arrow">&#8592</div>
+                        <div class="check">
+                            <h2>Checkout</h2>
+                            <p>Homepage/Clothing/Category/<span>Checkout</span></p>
+                        </div>
+                    </div>
+                    <div class="cart-icon">
+                        <img src="f6804473eb5047f421c836c1e7856830" alt="">
+                    </div>
+                </header>
+            </div>
+      
+</body>
+</html>

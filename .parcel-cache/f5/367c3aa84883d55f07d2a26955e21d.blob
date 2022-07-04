@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+</head>
+<body>
+        <section id="section">
+            <div class="container">
+                <header>
+                    <div class="checkout">
+                        <div class="arrow">&#8592</div>
+                        <div class="check">
+                                 
+                        </div>
+                    </div>
+                    <div class="cart-icon">
+
+                    </div>
+                </header>
+            </div>
+        </section>
+</body>
+</html>

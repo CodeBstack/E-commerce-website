@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.a3c89704.css">
+    <title>E-commerce</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="checkout">
+          <div class="arrow"><img src="/left-arrow.7aebf075.svg" alt=""></div>
+          <div class="check">
+            <h1>Checkout</h1>
+            <p>Homepage/Clothing/Category<span>/Checkout</span></p>
+          </div>
+        </div>
+        <div class="cart-icon">
+          <img src="/cart-icon.05f277ab.svg" alt="cart">
+          <div class="counts"><p>1</p></div>
+        </div>
+      </header>
+
+      <main class="main-container">
+        <div class="item-list">
+          <div class="nav">
+            <!-- <div class="nav-item">
+                        <div class="nav-1">
+                            <div class="mains">
+                                <p>1</p>
+                            </div>
+                        </div>
+                        <p class="label">Select</p>
+                    </div> 
+                    <div class="nav-item">
+                        <div class="nav-1">
+                            <div class="mains">
+                                <p>2</p>
+                            </div>
+                        </div>
+                        <p class="label">Payment</p>
+                    </div>
+                     <div class="nav-item">
+                        <div class="nav-1">
+                            <div class="mains">
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <p class="label">Confirmation</p>
+                    </div> -->
+          </div>
+          <div class="items">
+            <div class="item">
+              <img src="/test-imag.04b38d70.svg" alt="item">
+              <h3 class="item-title">Govanni Polo</h3>
+              <p class="price">$140.00</p>
+            </div>
+            <div class="item">
+              <img src="/test-imag.04b38d70.svg" alt="item">
+              <h3 class="item-title">Govanni Polo</h3>
+              <p class="price">$140.00</p>
+            </div>
+            <div class="item">
+              <img src="/test-imag.04b38d70.svg" alt="item">
+              <h3 class="item-title">Govanni Polo</h3>
+              <p class="price">$140.00</p>
+            </div>
+            <div class="item">
+              <img src="/test-imag.04b38d70.svg" alt="item">
+              <h3 class="item-title">Govanni Polo</h3>
+              <p class="price">$140.00</p>
+            </div>
+            <div class="item">
+              <img src="/test-imag.04b38d70.svg" alt="item">
+              <h3 class="item-title">Govanni Polo</h3>
+              <p class="price">$140.00</p>
+            </div>
+            <div class="item">
+              <img src="/test-imag.04b38d70.svg" alt="item">
+              <h3 class="item-title">Govanni Polo</h3>
+              <p class="price">$140.00</p>
+            </div>
+            <div class="item">
+              <img src="/test-imag.04b38d70.svg" alt="item">
+              <h3 class="item-title">Govanni Polo</h3>
+              <p class="price">$140.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="orders">
+          <div class="order-heading">
+            <h2>Your Order</h2>
+          </div>
+          <hr>
+          <div class="order-items">
+            <div class="order-preview">
+              <div class="item-title">
+                <h3>Vintage Sport Jacket</h3>
+                <img src="/delete-icon.caf2893f.svg" alt="">
+              </div>
+              <div class="order-item-main">
+                <div class="img">
+                  <img src="/test-imag.04b38d70.svg" alt="">
+                </div>
+                <div class="title">
+                  <p>-Vintage Highschool Jock Bully -1960 Classic Edition</p>
+                </div>
+                div.
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
