@@ -1,0 +1,62 @@
+const item = [
+  {
+    id: 53454,
+    title: "Men's Slim-Fit 9\" Short",
+    image_url: "https://m.media-amazon.com/images/I/71xy7iXBJ-S._AC_UX342_.jpg",
+    price: "$17.40",
+  },
+  {
+    id: 53455,
+    title: "Men's Classic-Fit Wrinkle-Resistant Flat-Front Chino Pant",
+    image_url: "https://m.media-amazon.com/images/I/61X-QR1b61S._AC_UX342_.jpg",
+    price: "$17.70",
+  },
+  {
+    id: 53456,
+    title: "Men's Slim-Fit 9\" ShortEssentials Men's Hooded Fleece Sweatshirt",
+    image_url: "https://m.media-amazon.com/images/I/81Xf5Ve1YgL._AC_UX342_.jpg",
+    price: "$24.00",
+  },
+  {
+    id: 53457,
+    title: "The Drop Women's Karina Cropped Boxy Blazer",
+    image_url: "https://m.media-amazon.com/images/I/814SJVLQcxL._AC_UX342_.jpg",
+    price: "$69.90",
+  },
+  {
+    id: 53458,
+    title: "BB DAKOTA Women's Victroiously Yours Woven Top",
+    image_url: "https://m.media-amazon.com/images/I/71sD+tfInAL._AC_UY445_.jpg",
+    price: "$30.93",
+  },
+  {
+    id: 53459,
+    title: "Levi's Women's Ex-Boyfriend Trucker Jacket",
+    image_url: "https://m.media-amazon.com/images/I/51fnh5a-ACL._AC_UX385_.jpg",
+    price: "$53.70",
+  },
+  {
+    id: 53460,
+    title: "BTFBM Women One Shoulder Sleeveless Casual Summer Dresses",
+    image_url: "https://m.media-amazon.com/images/I/81SbGliMb6L._AC_UY445_.jpg",
+    price: "$39.99",
+  },
+  {
+    id: 53461,
+    title: "Women's Flat Banded Sandal",
+    image_url: "https://m.media-amazon.com/images/I/61UkfFmypdL._AC_UX395_.jpg",
+    price: "$20.70",
+  },
+  {
+    id: 53462,
+    title: "Women's Short-Sleeve Scoop Neck Swing Dress",
+    image_url: "https://m.media-amazon.com/images/I/81zIttd7fbL._AC_UX342_.jpg",
+    price: "$17.40",
+  },
+  {
+    id: 53463,
+    title: "Men's Regular-fit Short-Sleeve Print Shirt",
+    image_url: "https://m.media-amazon.com/images/I/91JstEj4kEL._AC_UX342_.jpg",
+    price: "$18.50",
+  },
+];
