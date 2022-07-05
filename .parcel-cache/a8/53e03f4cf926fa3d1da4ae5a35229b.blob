@@ -1,0 +1,108 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = exports.loadItemData = exports.deleteCart = exports.addOrder = exports.addCart = exports.ItemsPage = void 0;
+
+var _data = require("./data.js");
+
+const state = {
+  items: {
+    results: [],
+    page: 1,
+    resultsPerPage: 6
+  },
+  orders: [],
+  cart: []
+};
+exports.state = state;
+
+const loadItemData = function () {
+  state.items.results = _data.data.map(rec => {
+    return {
+      id: rec.id,
+      title: rec.title,
+      image: rec.image_url,
+      price: rec.price
+    };
+  });
+  state.items.page = 1; // console.log(state.items.results);
+};
+
+exports.loadItemData = loadItemData;
+
+const ItemsPage = function () {
+  let page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  state.items.page = page;
+  const start = (page - 1) * state.items.resultsPerPage; // 0;
+
+  const end = page * state.items.resultsPerPage; // 5;
+
+  return state.items.results.slice(start, end);
+}; // Storing Cart in the local storage
+
+
+exports.ItemsPage = ItemsPage;
+
+const persistCart = function () {
+  localStorage.setItem('cart', JSON.stringify(state.cart));
+};
+
+const addCart = function (item) {
+  // Add bookmark
+  state.cart.push(item); // Mark current item as carted
+
+  if (item.id === state.items.id) state.items.carted = true; // persistCart();
+};
+
+exports.addCart = addCart;
+
+const deleteCart = function (id) {
+  //  Delete bookmark
+  const index = state.cart.findIndex(el => el.id === id);
+  state.cart.splice(index, 1); // Mark current item as NOT carted
+
+  if (id === state.items.id) state.items.carted = false; // persistCart();
+};
+
+exports.deleteCart = deleteCart;
+
+const addOrder = function (e) {
+  const data = state.items.results;
+  const ind = data.map(el => {
+    if (el.id === +e.target.dataset.order) return el;
+  });
+  const filtered = ind.filter(data => data !== undefined);
+  const newObj = filtered.map((data, i) => {
+    // console.log(data);
+    // if (data.ordered) return;
+    const orderItem = {
+      ordered: true,
+      counts: 1,
+      updatedPrice: 1,
+      ...filtered[i]
+    }; // console.log(data);
+
+    return orderItem;
+  }); // console.log(newObj);
+
+  state.order.filter(data => data.ordered === true); // console.log(newObj);
+
+  state.orders.push(...newObj);
+  console.log(state.orders);
+  return newObj;
+};
+
+exports.addOrder = addOrder;
+
+const init = function () {
+  const storage = localStorage.getItem('cart');
+  if (storage) state.cart = JSON.parse(storage);
+}; // init();
+// clears the local storage for easy debugging
+
+
+const clearBookmarks = function () {
+  localStorage.clear('cart');
+}; // clearBookmarks;

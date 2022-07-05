@@ -1,0 +1,149 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = exports.loadItemData = exports.incOrder = exports.deleteOrder = exports.deleteCart = exports.decOrder = exports.addOrder = exports.addCart = exports.ItemsPage = void 0;
+
+var _data = require("./data.js");
+
+const state = {
+  items: {
+    results: [],
+    page: 1,
+    resultsPerPage: 6
+  },
+  orders: [],
+  cart: []
+}; // function geting the data from data.js and supplying the controller.
+
+exports.state = state;
+
+const loadItemData = function () {
+  state.items.results = _data.data.map(rec => {
+    return {
+      id: rec.id,
+      title: rec.title,
+      image: rec.image_url,
+      price: rec.price
+    };
+  });
+  state.items.page = 1; // console.log(state.items.results);
+}; // function dividing all elements into pages for pagination by slicing the array.
+
+
+exports.loadItemData = loadItemData;
+
+const ItemsPage = function () {
+  let page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  state.items.page = page;
+  const start = (page - 1) * state.items.resultsPerPage; // 0;
+
+  const end = page * state.items.resultsPerPage; // 5;
+
+  return state.items.results.slice(start, end);
+}; // Storing Cart in the local storage
+
+
+exports.ItemsPage = ItemsPage;
+
+const persistCart = function () {
+  localStorage.setItem('cart', JSON.stringify(state.cart));
+}; // Add to Cart
+
+
+const addCart = function (item) {
+  // Add bookmark
+  state.cart.push(item); // Mark current item as carted
+
+  if (item.id === state.items.id) state.items.carted = true; // persistCart();
+}; // Delete Cart
+
+
+exports.addCart = addCart;
+
+const deleteCart = function (id) {
+  //  Delete bookmark
+  const index = state.cart.findIndex(el => el.id === id);
+  state.cart.splice(index, 1); // Mark current item as NOT carted
+
+  if (id === state.items.id) state.items.carted = false; // persistCart();
+}; // Adding each order
+
+
+exports.deleteCart = deleteCart;
+
+const addOrder = function (e) {
+  const data = state.items.results; // Gets the clicked element
+
+  const ind = data.map((el, i) => {
+    if (el.id === +e.target.dataset.order && el !== undefined) {
+      // return el, i;
+      // console.log(el, i);
+      const orderItem = {
+        ordered: true,
+        counts: 1,
+        updatedPrice: el.price,
+        ...data[i]
+      };
+      if (state.orders.includes(orderItem)) return;
+      state.orders.push(orderItem);
+    }
+  });
+}; // Deleting specific orders
+
+
+exports.addOrder = addOrder;
+
+const deleteOrder = function (e) {
+  const index = state.orders.map((el, i) => {
+    if (el.id === +e.target.parentElement.parentElement.dataset.order) return i;
+  });
+  state.orders.splice(index, 1);
+}; // Increasing order
+
+
+exports.deleteOrder = deleteOrder;
+
+const incOrder = function (e) {
+  const id = +e.target.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.order;
+  state.orders.find(el => {
+    if (el.id === id) el.counts += 1; // console.log(el.counts);
+  });
+  updatePrice(id);
+}; // Decrease Order
+
+
+exports.incOrder = incOrder;
+
+const decOrder = function (e) {
+  const id = +e.target.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.order;
+  state.orders.find(el => {
+    if (el.id === id && el.counts > 1) el.counts -= 1; // console.log(el.counts);
+  });
+  updatePrice(id);
+}; // Multiply price by current number of elements and update
+
+
+exports.decOrder = decOrder;
+
+const updatePrice = function (id) {
+  state.orders.find(el => {
+    if (el.id === id) {
+      const priceOnly = +el.price.replace('$', '');
+      el.updatedPrice = `$${(priceOnly * el.counts).toFixed(2)}`; // console.log(el.updatedPrice);
+    }
+  });
+}; // initialises the local storage at the load of the page.
+
+
+const init = function () {
+  const storage = localStorage.getItem('cart');
+  if (storage) state.cart = JSON.parse(storage);
+}; // init();
+// clears the local storage for easy debugging
+
+
+const clearBookmarks = function () {
+  localStorage.clear('cart');
+}; // clearBookmarks;

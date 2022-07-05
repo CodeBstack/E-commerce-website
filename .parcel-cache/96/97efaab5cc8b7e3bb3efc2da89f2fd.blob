@@ -1,0 +1,40 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = exports.loadItemData = void 0;
+
+var _data = require("./data.js");
+
+const state = {
+  items: {
+    results: [],
+    page: 1,
+    resultsPerPage: 6
+  },
+  cart: []
+};
+exports.state = state;
+
+const loadItemData = function () {
+  state.items.results = _data.data.map(rec => {
+    // map returns a new array from the data and set new variable names and also store in the empty results array in the state function
+    return {
+      id: rec.id,
+      title: rec.title,
+      publisher: rec.publisher,
+      image: rec.image_url
+    };
+  });
+  state.items.page = 1;
+  console.log(state.items.results);
+}; // export const ItemsPage = function (page) {
+//     // state.search.page = page;
+//     const start = (page - 1) * 6; // 0;
+//     const end = page * 6; // 4;
+//     return data.slice(start, end);
+//   };
+
+
+exports.loadItemData = loadItemData;

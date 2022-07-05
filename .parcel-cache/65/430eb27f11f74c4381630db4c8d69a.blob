@@ -1,0 +1,31 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _view = _interopRequireDefault(require("./view.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class ItemView extends _view.default {
+  _parentElement = document.querySelector(".items");
+
+  _generateMarkup() {
+    return this._data.map(result => {
+      // console.log(result);
+      return ` <div class="item" id="${result.id}">
+         <img src="${result.image}" alt="item" />
+         <p class="item-title">${result.title}</p>
+         <p class="price">${result.price}</p>
+       </div>
+       `;
+    });
+  }
+
+}
+
+var _default = new ItemView();
+
+exports.default = _default;

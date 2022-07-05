@@ -1,0 +1,75 @@
+"use strict";
+
+var model = _interopRequireWildcard(require("./model.js"));
+
+var _itemView = _interopRequireDefault(require("./views/itemView.js"));
+
+var _paginationView = _interopRequireDefault(require("./views/paginationView.js"));
+
+var _cartView = _interopRequireDefault(require("./views/cartView.js"));
+
+var _orderView = _interopRequireDefault(require("./views/orderView.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const controlItems = function () {
+  model.loadItemData();
+
+  _itemView.default.render(model.ItemsPage()); // Render initial pagination button
+
+
+  _paginationView.default.render(model.state.items);
+};
+
+controlItems();
+
+const controlPagination = function (goToPage) {
+  // 1) Render NEW results
+  _itemView.default.render(model.ItemsPage(goToPage)); // 2) Render NEW pagination  buttons
+
+
+  _paginationView.default.render(model.state.items);
+};
+
+const controlAddCart = function () {
+  // 1) Add/remove Cart
+  if (!model.state.cart.carted) model.addCart(model.state.cart);else model.deleteCart(model.state.cart.id); // console.log(model.state.cart);
+  // 2) Update cart view
+  // cartView.update(model.state.cart);
+  // 3) Render cart
+  // cartView.render(model.state.cart);
+}; // const controlCart = function () {
+//   cartView.render(model.state.cart);
+// };
+
+
+const controlAddOrder = function (e) {
+  if (e.target.classList.contains('item')) {
+    model.addOrder(e); // console.log(model.addOrder(e));
+    // if (!model.state.orders.ordered) {
+    //   console.log(model.state.orders);
+    // }
+
+    _orderView.default.render(model.state.orders);
+  }
+};
+
+const itemBtn = document.querySelector('.items');
+
+_itemView.default.addHandlerAddOrder(controlAddOrder);
+
+itemBtn.addEventListener('click', function (e) {
+  controlAddOrder(e);
+});
+
+const init = function () {
+  // cartView.addHandlerRender(controlCart);
+  _paginationView.default.addHandlerClick(controlPagination); // itemView.addHandlerAddCart(controlAddCart);
+
+};
+
+init();

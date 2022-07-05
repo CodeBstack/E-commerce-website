@@ -1,0 +1,37 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _View = _interopRequireDefault(require("./View.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class CartView extends _View.default {
+  _parentElement = document.querySelector('.Carts__list');
+  _cartBtn = document.querySelector('.cart-icon');
+  _errorMessage = 'No Carts yet. Find a nice recipe and Cart it ;)';
+  _message = '';
+
+  addHandlerRender(handler) {
+    window.addEventListener('load', handler);
+  }
+
+  addHandlerMouseEvent() {
+    this._cartBtn.addEventListener('mouseenter', function () {
+      document.querySelector;
+    });
+  }
+
+  _generateMarkup() {
+    console.log(this._data, 'Carts');
+    return this._data.map(Cart => previewView.render(Cart, false)).join('');
+  }
+
+}
+
+var _default = new CartView();
+
+exports.default = _default;

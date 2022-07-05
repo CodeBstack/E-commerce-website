@@ -1,0 +1,107 @@
+"use strict";
+
+var model = _interopRequireWildcard(require("./model.js"));
+
+var _itemView = _interopRequireDefault(require("./views/itemView.js"));
+
+var _paginationView = _interopRequireDefault(require("./views/paginationView.js"));
+
+var _cartView = _interopRequireDefault(require("./views/cartView.js"));
+
+var _orderView = _interopRequireDefault(require("./views/orderView.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const controlItems = function () {
+  model.loadItemData();
+
+  _itemView.default.render(model.ItemsPage()); // Render initial pagination button
+
+
+  _paginationView.default.render(model.state.items);
+};
+
+const controlPagination = function (goToPage) {
+  // 1) Render NEW results
+  _itemView.default.render(model.ItemsPage(goToPage)); // 2) Render NEW pagination  buttons
+
+
+  _paginationView.default.render(model.state.items);
+};
+
+const controlAddCart = function () {
+  // 1) Add/remove Cart
+  if (!model.state.cart.carted) model.addCart(model.state.cart);else model.deleteCart(model.state.cart.id); // console.log(model.state.cart);
+  // 2) Update cart view
+  // cartView.update(model.state.cart);
+  // 3) Render cart
+  // cartView.render(model.state.cart);
+}; // const controlCart = function () {
+//   cartView.render(model.state.cart);
+// };
+
+
+const ordeitem = document.querySelector('.order-items');
+ordeitem.addEventListener('click', function (e) {
+  if (e.target.classList.contains('add-to-cart')) {
+    // console.log(
+    //   e.target.parentElement.parentElement.parentElement.dataset.order
+    // );
+    const i = model.state.orders.find(el => el.id === +e.target.parentElement.parentElement.parentElement.dataset.order);
+    let arr = [];
+    arr.push(i);
+    console.log(arr);
+    arr.forEach(el => {
+      if (model.state.cart.includes(el)) return;
+      model.state.cart.push(el);
+    });
+    console.log(model);
+  }
+});
+
+const controlAddOrder = function (e) {
+  model.addOrder(e);
+
+  _orderView.default.render(model.state.orders);
+};
+
+const controlDeleteOrder = function (e) {
+  model.deleteOrder(e);
+
+  _orderView.default.render(model.state.orders);
+};
+
+const controlIncOrder = function (e) {
+  model.incOrder(e);
+
+  _orderView.default.render(model.state.orders);
+};
+
+const controlDecOrder = function (e) {
+  model.decOrder(e);
+
+  _orderView.default.render(model.state.orders);
+}; // Using the publisher subscriber pattern.
+// The listener is in the VIEW and the handler is in the CONTROLLER
+
+
+const init = function () {
+  controlItems(); // cartView.addHandlerRender(controlCart);
+
+  _paginationView.default.addHandlerClick(controlPagination); // itemView.addHandlerAddCart(controlAddCart);
+
+
+  _itemView.default.addHandlerAddOrder(controlAddOrder);
+
+  _orderView.default.addHandlerDeleteOrder(controlDeleteOrder);
+
+  _orderView.default.addHandlerIncOrder(controlIncOrder);
+
+  _orderView.default.addHandlerDecOrder(controlDecOrder);
+};
+
+init();

@@ -1,0 +1,64 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _view = _interopRequireDefault(require("./view"));
+
+var _ = _interopRequireDefault(require(""));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class OrderView extends _view.default {
+  _parentElement = document.querySelector('.order-items');
+
+  _generateMarkup() {
+    return this._data.map(result => {
+      console.log(result);
+      return `
+        <div class="order-preview" id="${result.id}">
+        <div class="item-title">
+          <h3>${result.title}</h3>
+          <img class="delete" src="./img/delete-icon.svg" alt="" />
+        </div>
+    
+        <div class="order-item-main">
+          <div class="img">
+            <img src="${result.image}" alt="" />
+          </div>
+          <div class="title">
+            <p>${result.title}</p>
+          </div>
+          <div class="quantity">
+            <div class="quantity-heading">
+              <p>Quantity</p>
+              <div class="increments">
+                <p class="sign minus">&minus;</p>
+                <p>1</p>
+                <p class="sign plus">&plus;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="preview-footer">
+          <div class="add-to-cart">
+            <p>Add to Cart</p>
+            <img class="mark" src="./img/mark.svg" alt="" />
+          </div>
+          <div class="price">
+            <h4>${result.price}</h4>
+          </div>
+        </div>
+      </div>
+                  `;
+    }).join('');
+  }
+
+}
+
+var _default = new OrderView();
+
+exports.default = _default;

@@ -1,0 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.iterateData = void 0;
+const iterateData = data.map(data => {
+  return data;
+});
+exports.iterateData = iterateData;

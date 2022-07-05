@@ -1,0 +1,15 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.iterateData = void 0;
+
+var _data = require("./data.js");
+
+const iterateData = _data.data.forEach(datum => {
+  console.log(datum); //   return datum;
+});
+
+exports.iterateData = iterateData;
+console.log(iterateData);

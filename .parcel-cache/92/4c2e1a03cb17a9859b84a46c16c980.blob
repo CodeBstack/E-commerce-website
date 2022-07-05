@@ -1,0 +1,47 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _view = _interopRequireDefault(require("./view.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class ItemView extends _view.default {
+  _parentElement = document.querySelector('.items'); // addHandlerAddCart(handler) {
+  //   const btn = document.querySelector('.add-cart');
+  //   if (!btn) return;
+  //   btn.addEventListener('click', function () {
+  //     console.log('good');
+  //     handler();
+  //   });
+  // }
+
+  addHandlerAddOrder(handler) {
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest('.item');
+      if (!btn) return;
+      document.querySelector();
+      handler(e);
+    });
+  }
+
+  _generateMarkup() {
+    return this._data.map(result => {
+      // console.log(result);
+      return ` <div class="item"  id="${result.id}" data-order=${result.id}>
+         <img src="${result.image}" alt="item" />
+         <p class="item-title">${result.title}</p>
+         <p class="price">${result.price}</p>
+       </div>
+       `;
+    }).join('');
+  }
+
+}
+
+var _default = new ItemView();
+
+exports.default = _default;

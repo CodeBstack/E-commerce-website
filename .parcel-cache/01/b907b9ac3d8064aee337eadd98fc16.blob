@@ -1,0 +1,71 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = exports.loadItemData = exports.deleteBookmark = exports.addBookmark = exports.ItemsPage = void 0;
+
+var _data = require("./data.js");
+
+const state = {
+  items: {
+    results: [],
+    page: 1,
+    resultsPerPage: 6
+  },
+  cart: []
+};
+exports.state = state;
+
+const loadItemData = function () {
+  state.items.results = _data.data.map(rec => {
+    return {
+      id: rec.id,
+      title: rec.title,
+      image: rec.image_url,
+      price: rec.price
+    };
+  });
+  state.items.page = 1;
+  console.log(state.items.results);
+};
+
+exports.loadItemData = loadItemData;
+
+const ItemsPage = function () {
+  let page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  state.items.page = page;
+  const start = (page - 1) * state.items.resultsPerPage; // 0;
+
+  const end = page * state.items.resultsPerPage; // 5;
+
+  return state.items.results.slice(start, end);
+}; // Storing Cart in the local storage
+
+
+exports.ItemsPage = ItemsPage;
+
+const persistCart = function () {
+  localStorage.setItem('Cart', JSON.stringify(state.cart));
+};
+
+const addBookmark = function (item) {
+  // Add bookmark
+  state.cart.push(item); // Mark current item as bookmarked
+
+  if (item.id === state.item.id) state.item.bookmarked = true;
+  persistCart();
+};
+
+exports.addBookmark = addBookmark;
+
+const deleteBookmark = function (id) {
+  //  Delete bookmark
+  const index = state.Cart.findIndex(el => el.id === id);
+  state.Cart.splice(index, 1); // Mark current item as NOT bookmarked
+
+  if (id === state.item.id) state.item.bookmarked = false;
+  persistCart();
+};
+
+exports.deleteBookmark = deleteBookmark;

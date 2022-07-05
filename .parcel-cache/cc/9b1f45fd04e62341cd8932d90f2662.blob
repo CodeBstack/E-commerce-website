@@ -1,0 +1,7 @@
+"use strict";
+
+var _data = require("./data.js");
+
+_data.data.map(data => {
+  return data;
+});

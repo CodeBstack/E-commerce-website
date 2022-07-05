@@ -1,0 +1,28 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class View {
+  _data;
+
+  render(data) {
+    let render = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    this._data = data;
+
+    const markup = this._generateMarkup();
+
+    if (render) this._clear();
+
+    this._parentElement.insertAdjacentHTML("beforeend", markup);
+  }
+
+  _clear() {
+    this._parentElement.innerHTML = "";
+  }
+
+}
+
+exports.default = View;

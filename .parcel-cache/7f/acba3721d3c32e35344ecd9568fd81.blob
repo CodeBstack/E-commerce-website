@@ -1,0 +1,22 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = void 0;
+
+var _data = require("./data.js");
+
+// export const iterateData = data.map((datum) => {
+//   return datum;
+// });
+const state = {
+  items: {
+    id,
+    title,
+    image_url,
+    price,
+    counts
+  }
+};
+exports.state = state;
