@@ -25,7 +25,7 @@
 113C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\object.getownpropertydescriptors133013855772105547 1
 113C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\transformer-posthtml\src133013855710435461 1
 106C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\tough-cookie\node_modules133013855577873500 1
-72C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist133015173170952918 1
+72C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist133015180194123415 1
 89C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\svgo\lib133013855873610441 1
 119C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\connect\node_modules\debug\.travis.yml133013855755050585 0
 127C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\jsdom\lib\jsdom\living\generated\FocusEvent.js133013855913607009 0
@@ -2831,7 +2831,7 @@
 107C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\object-assign\package.json133013855638447610 0
 134C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\regenerate-unicode-properties\Script\Old_Hungarian.js133013855992455824 0
 135C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\stylehacks\node_modules\postcss-selector-parser\API.md133013855807147113 0
-96C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\left-arrow.25af7564.svg133015173170483210 0
+96C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\left-arrow.25af7564.svg133015180177841800 0
 119C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\css-tree\lib\syntax\node\Percentage.js133013855911027481 0
 84C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\use133013855678225354 1
 100C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\lodash\fp\create.js133013856014289097 0
@@ -8988,7 +8988,7 @@
 97C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\lodash\before.js133013856008769839 0
 109C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\es\typed-array\at.js133013855928842717 0
 112C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\features\set-timeout.js133013856160463754 0
-95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\style.a3c89704.css.map133015173170723063 0
+95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\style.a3c89704.css.map133015180194083454 0
 104C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\lodash\_baseIsNative.js133013855875290194 0
 95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\lodash\bind.js133013856008849827 0
 98C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\lodash\bindAll.js133013856009009834 0
@@ -16099,7 +16099,7 @@
 111C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\es\number\parse-int.js133013856146305650 0
 116C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\es\number\to-exponential.js133013856174870956 0
 115C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\es\number\virtual\index.js133013856124628569 0
-99C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\controller.aff5bb77.js.map133015173170922935 0
+99C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\controller.aff5bb77.js.map133015180194093435 0
 124C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\es\number\virtual\to-exponential.js133013856174870956 0
 122C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\es\number\virtual\to-precision.js133013856176070821 0
 115C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\core\src\PackagerRunner.js133013855896020475 0
@@ -16208,7 +16208,7 @@
 100C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\actual\json133013856178070541 1
 130C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\caniuse-lite\data\features\requestidlecallback.js133013856039485720 0
 99C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\actual\map133013856122948794 1
-90C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\mark.ac88cffc.svg133015173170473209 0
+90C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\mark.ac88cffc.svg133015180177821820 0
 100C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\actual\math133013856182420152 1
 109C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\events\src\errors.js133013855724382855 0
 110C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\core-js\actual\parse-float.js133013856146065696 0
@@ -17417,7 +17417,7 @@
 124C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\transformer-json\node_modules\json5133013855771305648 1
 128C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\transformer-json\node_modules\json5\lib133013855795175927 1
 135C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\transformer-json\node_modules\json5\LICENSE.md133013855767365887 0
-95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\controller.aff5bb77.js133015173170882966 0
+95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\controller.aff5bb77.js133015180193993504 0
 134C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\transformer-json\node_modules\json5\README.md133013855771865622 0
 139C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\transformer-json\node_modules\json5\lib\index.d.ts133013855784672133 0
 139C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\transformer-json\node_modules\json5\lib\parse.d.ts133013855788431636 0
@@ -17521,7 +17521,7 @@
 120C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\source-map\dist\wasm-browser.js133013855851493466 0
 125C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\source-map\dist\wasm-browser.js.flow133013855760489867 0
 117C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\source-map\dist\wasm-node.js133013855853013258 0
-97C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\delete-icon.caf2893f.svg133015173170473209 0
+97C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\delete-icon.caf2893f.svg133015180177851798 0
 122C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\source-map\dist\wasm-node.js.flow133013855763529444 0
 116C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@babel\types\lib\definitions\jsx.js133013855861252150 0
 117C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@parcel\source-map\dist\wasm.js.flow133013855768574751 0
@@ -18804,7 +18804,7 @@
 142C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@babel\helper-define-polyfill-provider\lib\define-provider.js133013855760009928 0
 140C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@babel\helper-define-polyfill-provider\lib\imports-cache.js133013855763129502 0
 132C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@babel\helper-define-polyfill-provider\lib\index.js133013855768894714 0
-83C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\index.html133015173170483210 0
+83C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\index.html133015180193973518 0
 128C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@babel\helper-define-polyfill-provider\lib\node133013855775865063 1
 144C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@babel\helper-define-polyfill-provider\lib\normalize-options.js133013855778584671 0
 132C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\@babel\helper-define-polyfill-provider\lib\types.js133013855782504140 0
@@ -19014,12 +19014,12 @@
 95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\.bin\which.cmd133013856192779175 0
 95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\node_modules\.bin\which.ps1133013856192779175 0
 95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\cart-icon.05f277ab.svg133015065898464308 0
-95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\cart-icon.8ac9df82.svg133015173170483210 0
-97C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\delete-icon.d3b9b46d.svg133015173170473209 0
+95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\cart-icon.8ac9df82.svg133015180177831819 0
+97C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\delete-icon.d3b9b46d.svg133015180177811821 0
 95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\e-commerce.ee187eca.js133013974576756341 0
 99C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\e-commerce.ee187eca.js.map133013974576806319 0
 96C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\left-arrow.7aebf075.svg133015067068598637 0
 90C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\mark.cc254beb.svg133015005840586961 0
 94C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\model.81a5d19f.js.map133014109514432461 0
-91C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\style.a3c89704.css133015173170483210 0
-95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\test-imag.04b38d70.svg133015173170683084 0
+91C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\style.a3c89704.css133015180193963515 0
+95C:\Users\Samuel Sunmonu\Desktop\CodeJourney\ProjectsByMe\e-commerce\dist\test-imag.04b38d70.svg133015180178101639 0
