@@ -37,7 +37,7 @@ const controlAddOrder = function (e) {
   model.addOrder(e);
 
   // model.state.orders;
-  orderView.render(model.state.orders, false);
+  orderView.render(model.state.orders);
 };
 
 const controlDeleteOrder = function (e) {
