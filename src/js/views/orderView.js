@@ -13,9 +13,6 @@ class OrderView extends View {
         e.target.style.display = 'none';
         e.target.nextElementSibling.style.display = 'block';
       }
-      // handler(e);
-      // e.target.style.display = 'none';
-      // e.target.nextElementSibling.style.display = 'block';
     });
   }
   addHandlerDeleteCart(handler) {
@@ -26,9 +23,6 @@ class OrderView extends View {
         e.target.style.display = 'none';
         e.target.previousElementSibling.style.display = 'block';
       }
-      // handler(e);
-      // e.target.style.display = 'none';
-      // e.target.previousElementSibling.style.display = 'block';
     });
   }
 
@@ -96,6 +90,7 @@ class OrderView extends View {
           </div>
         </div>
       </div>
+      
                   `;
       })
       .join('');

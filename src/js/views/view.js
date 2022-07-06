@@ -5,7 +5,7 @@ export default class View {
     this._data = data;
     const markup = this._generateMarkup();
 
-    
+
 
     if (render) this._clear();
     this._parentElement.insertAdjacentHTML('beforeend', markup);

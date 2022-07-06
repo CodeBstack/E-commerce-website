@@ -47,14 +47,17 @@ export const addCart = function (e) {
       el.id ===
       +e.target.parentElement.parentElement.parentElement.dataset.order
   );
+  console.log(i);
+  console.log(state.orders);
   let arr = [];
   arr.push(i);
 
   arr.forEach(el => {
     if (state.cart.includes(el)) return;
     state.cart.push(el);
+
     state.cartCount = state.cart.length;
-    console.log(state.cartCount);
+    // console.log(state.cartCount);
     document.querySelector('.counts').textContent = state.cartCount;
   });
 };
@@ -74,23 +77,43 @@ export const deleteCart = function (e) {
 export const addOrder = function (e) {
   const data = state.items.results;
 
-  // Gets the clicked element
-  data.forEach((el, i) => {
-    if (el.id === +e.target.dataset.order && el !== undefined) {
-      // return el, i;
-      // console.log(el, i);
-      const orderItem = {
-        ordered: true,
-        counts: 1,
-        updatedPrice: el.price,
-        ...data[i],
-      };
-
-      if (state.orders.includes(orderItem)) return;
-      state.orders.push(orderItem);
-      
-    }
+  const i = data.map(el => {
+    if (el.id === +e.target.dataset.order) return el;
   });
+
+  const filter = i.filter(el => el !== undefined);
+
+  filter.forEach((el, i) => {
+    const orderItem = {
+      ordered: true,
+      counts: 1,
+      updatedPrice: el.price,
+      ...filter[i],
+    };
+
+    state.orders.push(orderItem);
+  });
+
+  // console.log(findData);
+
+  // arr.push(findData);
+  // console.log(arr);
+
+  // Gets the clicked element
+  //  data.forEach((el, i) => {
+  //   if (el.id === +e.target.dataset.order) {
+  //     // return el, i;
+  //     // console.log(el, i);
+  //     const orderItem = {
+  //       ordered: true,
+  //       counts: 1,
+  //       updatedPrice: el.price,
+  //       ...data[i],
+  //     };
+  //     // return orderItem;
+  //     state.orders.push(orderItem);
+  //   }
+  // });
 };
 
 // Deleting specific orders
@@ -100,8 +123,6 @@ export const deleteOrder = function (e) {
   });
   state.cart.splice(index, 1);
   state.orders.splice(index, 1);
-  // console.log(state.cart);
-  // state.cart.splice(index, 1);
 };
 
 // Increasing order
