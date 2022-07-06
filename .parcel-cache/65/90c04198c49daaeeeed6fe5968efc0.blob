@@ -1,0 +1,98 @@
+"use strict";
+
+var model = _interopRequireWildcard(require("./model.js"));
+
+var _itemView = _interopRequireDefault(require("./views/itemView.js"));
+
+var _paginationView = _interopRequireDefault(require("./views/paginationView.js"));
+
+var _cartView = _interopRequireDefault(require("./views/cartView.js"));
+
+var _orderView = _interopRequireDefault(require("./views/orderView.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const controlItems = function () {
+  model.loadItemData();
+
+  _itemView.default.render(model.ItemsPage()); // Render initial pagination button
+
+
+  _paginationView.default.render(model.state.items);
+};
+
+const controlPagination = function (goToPage) {
+  // 1) Render NEW results
+  _itemView.default.render(model.ItemsPage(goToPage)); // 2) Render NEW pagination  buttons
+
+
+  _paginationView.default.render(model.state.items);
+};
+
+const controlAddCart = function (e) {
+  model.addCart(e);
+
+  _cartView.default.render(model.state.cart);
+};
+
+const controlDeleteCart = function (e) {
+  model.deleteCart(e);
+
+  _cartView.default.render(model.state.cart);
+};
+
+const controlAddOrder = function (e) {
+  model.addOrder(e); // console.log(model.addOrder(e));
+  // console.log(model.state.orders);
+  // model.state.orders;
+
+  _orderView.default.render(model.state.orders);
+};
+
+const controlDeleteOrder = function (e) {
+  model.deleteOrder(e);
+
+  _orderView.default.render(model.state.orders);
+
+  _cartView.default.render(model.state.cart);
+};
+
+const controlIncOrder = function (e) {
+  model.incOrder(e);
+
+  _orderView.default.render(model.state.orders);
+};
+
+const controlDecOrder = function (e) {
+  model.decOrder(e);
+
+  _orderView.default.render(model.state.orders);
+}; // Using the publisher subscriber pattern.
+// The listener is in the VIEW and the handler is in the CONTROLLER
+
+
+const init = function () {
+  controlItems();
+
+  _itemView.default.cartDisplay();
+
+  _paginationView.default.addHandlerClick(controlPagination);
+
+  _itemView.default.addHandlerAddOrder(controlAddOrder);
+
+  _orderView.default.addHandlerDeleteOrder(controlDeleteOrder);
+
+  _orderView.default.addHandlerIncOrder(controlIncOrder);
+
+  _orderView.default.addHandlerDecOrder(controlDecOrder);
+
+  _orderView.default.addHandlerAddCart(controlAddCart);
+
+  _orderView.default.addHandlerDeleteCart(controlDeleteCart);
+};
+
+init();

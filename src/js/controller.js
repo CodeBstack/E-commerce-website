@@ -35,9 +35,7 @@ const controlDeleteCart = function (e) {
 
 const controlAddOrder = function (e) {
   model.addOrder(e);
-  // console.log(model.addOrder(e));
 
-  // model.state.orders;
   orderView.render(model.state.orders);
 };
 
@@ -45,6 +43,8 @@ const controlDeleteOrder = function (e) {
   model.deleteOrder(e);
 
   orderView.render(model.state.orders);
+
+  // model.deleteCart(e);
   // cartView.render(model.state.cart);
 };
 

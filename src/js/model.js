@@ -40,6 +40,10 @@ const persistCart = function () {
   localStorage.setItem('cart', JSON.stringify(state.cart));
 };
 
+const persistOrder = function () {
+  localStorage.setItem('order', JSON.stringify(state.orders));
+};
+
 // Add to Cart
 export const addCart = function (e) {
   const i = state.orders.find(
@@ -47,8 +51,7 @@ export const addCart = function (e) {
       el.id ===
       +e.target.parentElement.parentElement.parentElement.dataset.order
   );
-  console.log(i);
-  console.log(state.orders);
+
   let arr = [];
   arr.push(i);
 
@@ -60,6 +63,8 @@ export const addCart = function (e) {
     // console.log(state.cartCount);
     document.querySelector('.counts').textContent = state.cartCount;
   });
+
+  // persistCart();
 };
 
 // Delete Cart
@@ -71,6 +76,11 @@ export const deleteCart = function (e) {
   );
   // console.log(index);
   state.cart.splice(index, 1);
+
+  state.cartCount = state.cart.length;
+  // console.log(state.cartCount);
+  document.querySelector('.counts').textContent = state.cartCount;
+  // persistCart();
 };
 
 // Adding each order
@@ -83,7 +93,7 @@ export const addOrder = function (e) {
 
   const filter = i.filter(el => el !== undefined);
 
-  filter.forEach((el, i) => {
+  const addProperty = filter.map((el, i) => {
     const orderItem = {
       ordered: true,
       counts: 1,
@@ -91,9 +101,11 @@ export const addOrder = function (e) {
       ...filter[i],
     };
 
-    state.orders.push(orderItem);
+    return orderItem;
   });
+  state.orders.push(...addProperty);
 
+  // persistOrder();
   // console.log(findData);
 
   // arr.push(findData);
@@ -118,11 +130,15 @@ export const addOrder = function (e) {
 
 // Deleting specific orders
 export const deleteOrder = function (e) {
-  const index = state.orders.map((el, i) => {
-    if (el.id === +e.target.parentElement.parentElement.dataset.order) return i;
+  console.log(state.orders);
+  const ind = state.orders.map((el, i) => {
+    if (el.id === +e.target.parentElement.parentElement.dataset.order)
+      state.orders.splice(i, 1);
+    return i;
   });
-  state.cart.splice(index, 1);
-  state.orders.splice(index, 1);
+
+  // console.log(state.orders);
+  // persistOrder();
 };
 
 // Increasing order
@@ -164,14 +180,21 @@ const updatePrice = function (id) {
 };
 
 // initialises the local storage at the load of the page.
-const init = function () {
-  const storage = localStorage.getItem('cart');
-  if (storage) state.cart = JSON.parse(storage);
-};
+// const init = function () {
+//   const storage1 = localStorage.getItem('cart');
+//   if (storage1) state.cart = JSON.parse(storage1);
+// };
 // init();
+
+// const init2 = function () {
+//   const storage2 = localStorage.getItem('order');
+//   if (storage2) state.orders = JSON.parse(storage2);
+// };
+// init2();
 
 // clears the local storage for easy debugging
 const clearBookmarks = function () {
   localStorage.clear('cart');
+  localStorage.clear('order');
 };
-// clearBookmarks;
+// clearBookmarks();
