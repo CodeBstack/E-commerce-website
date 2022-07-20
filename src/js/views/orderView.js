@@ -53,7 +53,6 @@ class OrderView extends View {
   _generateMarkup() {
     return this._data
       .map(result => {
-        // console.log(result);
         return `
         <div class="order-preview" id="${result.id}" data-order=${result.id}>
         <div class="items-title">
@@ -79,7 +78,6 @@ class OrderView extends View {
             </div>
           </div>
         </div>
-    
         <div class="preview-footer">
           <div>
             <p class="add-to-cart">Add to Cart</p>
@@ -90,7 +88,6 @@ class OrderView extends View {
           </div>
         </div>
       </div>
-      
                   `;
       })
       .join('');

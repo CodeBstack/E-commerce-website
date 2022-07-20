@@ -6,6 +6,7 @@ export const state = {
     page: 1,
     resultsPerPage: 6,
   },
+  initialArr: [],
   orders: [],
   cart: [],
   cartCount: 0,
@@ -42,6 +43,47 @@ const persistCart = function () {
 
 const persistOrder = function () {
   localStorage.setItem('order', JSON.stringify(state.orders));
+};
+
+// Adding each order
+export const addOrder = function (e) {
+  const data = state.items.results;
+
+  const foundData = data.find(el => el.id === +e.target.dataset.order);
+
+  const destructureData = {
+    ordered: true,
+    counts: 1,
+    updatedPrice: foundData.price,
+    ...foundData,
+  };
+  // console.log(destructureData);
+
+  state.initialArr.push(destructureData);
+
+  state.initialArr.map(el => {
+    if (!state.orders.includes(el) && el !== undefined) state.orders.push(el);
+  });
+
+  // persistOrder();
+};
+
+// Deleting specific orders
+export const deleteOrder = function (e) {
+  const index = state.orders.findIndex(
+    el => el.id === +e.target.parentElement.parentElement.dataset.order
+  );
+  if (state.orders.includes(index)) return;
+  // console.log(index);
+  state.orders.splice(index, 1);
+
+  // const ind = state.orders.map((el, i) => {
+  //   if (el.id === +e.target.parentElement.parentElement.dataset.order)
+  //     state.orders.splice(i, 1);
+  // return i;
+  // });
+
+  // persistOrder();
 };
 
 // Add to Cart
@@ -81,64 +123,6 @@ export const deleteCart = function (e) {
   // console.log(state.cartCount);
   document.querySelector('.counts').textContent = state.cartCount;
   // persistCart();
-};
-
-// Adding each order
-export const addOrder = function (e) {
-  const data = state.items.results;
-
-  const i = data.map(el => {
-    if (el.id === +e.target.dataset.order) return el;
-  });
-
-  const filter = i.filter(el => el !== undefined);
-
-  const addProperty = filter.map((el, i) => {
-    const orderItem = {
-      ordered: true,
-      counts: 1,
-      updatedPrice: el.price,
-      ...filter[i],
-    };
-
-    return orderItem;
-  });
-  state.orders.push(...addProperty);
-
-  // persistOrder();
-  // console.log(findData);
-
-  // arr.push(findData);
-  // console.log(arr);
-
-  // Gets the clicked element
-  //  data.forEach((el, i) => {
-  //   if (el.id === +e.target.dataset.order) {
-  //     // return el, i;
-  //     // console.log(el, i);
-  //     const orderItem = {
-  //       ordered: true,
-  //       counts: 1,
-  //       updatedPrice: el.price,
-  //       ...data[i],
-  //     };
-  //     // return orderItem;
-  //     state.orders.push(orderItem);
-  //   }
-  // });
-};
-
-// Deleting specific orders
-export const deleteOrder = function (e) {
-  console.log(state.orders);
-  const ind = state.orders.map((el, i) => {
-    if (el.id === +e.target.parentElement.parentElement.dataset.order)
-      state.orders.splice(i, 1);
-    return i;
-  });
-
-  // console.log(state.orders);
-  // persistOrder();
 };
 
 // Increasing order

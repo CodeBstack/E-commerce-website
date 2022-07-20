@@ -21,6 +21,22 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.items);
 };
 
+const controlAddOrder = function (e) {
+  model.addOrder(e);
+
+  orderView.render(model.state.orders);
+};
+
+const controlDeleteOrder = function (e) {
+  model.deleteOrder(e);
+  console.log(model.state.orders);
+
+  orderView.render(model.state.orders);
+
+  // model.deleteCart(e);
+  // cartView.render(model.state.cart);
+};
+
 const controlAddCart = function (e) {
   model.addCart(e);
 
@@ -31,21 +47,6 @@ const controlDeleteCart = function (e) {
   model.deleteCart(e);
 
   cartView.render(model.state.cart);
-};
-
-const controlAddOrder = function (e) {
-  model.addOrder(e);
-
-  orderView.render(model.state.orders);
-};
-
-const controlDeleteOrder = function (e) {
-  model.deleteOrder(e);
-
-  orderView.render(model.state.orders);
-
-  // model.deleteCart(e);
-  // cartView.render(model.state.cart);
 };
 
 const controlIncOrder = function (e) {
